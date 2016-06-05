@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #32b16c;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: #f4f4f4;
+    font-family: "Microsoft YaHei";
+    padding-top: 70px;
+
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background: #FFFFFF;
+    border-bottom: solid 0px #32b16c;
+    -webkit-box-shadow: #e5e5e5 0px 1px 4px;
+    -moz-box-shadow: #e5e5e5 0px 1px 4px;
+    box-shadow: #e5e5e5 0px 1px 4px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 35px;
+    color: #32b16c;
+    width: 230px;
+    line-height: 70px;
+}
+
+.logo a:hover {
+    color: #32b16c;
+    text-decoration: none;
+}
+
+.navbar-toggle {
+    background-color: #32b16c;
+    border-color: #32b16c;
+    margin-top: 20px;
+}
+
+.icon-bar {
+    background-color: #FFF;
+}
+
+.header-nav {
+    margin-top: 15px;
+}
+
+.header-nav a {
+    font-size: 16px;
+    color: rgb(54, 54, 54);
+    padding: 8px 15px !important;
+}
+
+.header-nav a:hover {
+    color: #FFFFFF;
+    background: #32b16c !important;
+}
+
+.login-box {
+    margin-top: 15px;
+}
+
+.login-box button {
+    color: #32b16c;
+    background: none;
+    border: 1px solid #32b16c;
+}
+
+/*头部结束，主页面开始*/
+.pad-top35 {
+    padding-top: 35px;
+}
+
+.pad-15 {
+    padding: 15px;
+}
+
+.catagory-item {
+    padding-left: 60px;
+}
+
+.nav-catagory {
+
+    padding: 10px 0px;
+
+}
+
+.catagory-title {
+    float: left;
+    padding-left: 15px;
+}
+
+.catagory-item a {
+    color: #646464;
+    font-size: 14px;
+    padding: 2px 12px;
+    margin-right: 10px;
+    color: #646464;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.catagory-item .active {
+    color: #fff;
+    background-color: #32b16c;
+}
+
+.catagory-item a:hover {
+    background: #32b16c;
+    color: #FFFFFF;
+}
+
+.goods-box-title {
+    border-bottom: 1px solid #eee;
+}
+
+.goods-box-title p {
+    font-size: 18px;
+    color: #666666;
+    padding: 10px 20px 0px 20px;
+}
+
+.good-item-box {
+    padding: 20px 0px;
+    overflow: hidden; /*清除浮动*/
+    border-bottom: 1px solid #ededed;
+}
+
+.goods-item {
+    padding-bottom: 20px;
+}
+
+.goods-item-title {
+    margin-bottom: 5px !important;
+}
+
+.goods-img-link {
+    display: inline-block;
+    border: 1px solid #ededed;
+    margin-bottom: 5px;
+}
+
+.goods-img-link img {
+    margin: 0 auto;
+}
+
+
+.good-item-price span {
+    color: #EB5055;
+}
+
+.goods-item-btn {
+    background: none;
+}
+
+.right-btn-tools {
+    padding: 10px 8px;
+}
+
+.right-btn-tools a {
+    padding: 5px 10px;
+}
+
+.right-btn-tools button {
+    padding: 6px 20px;
+}
+
+.news-box {
+    padding: 10px 10px;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+
+}
+
+.news-title-top {
+    font-size: 16px;
+    text-align: center;
+    color: #32b16c;
+    padding: 10px 0px;
+}
+
+.news-title-top a:hover {
+    color: #32b16c;
+}
+
+.news-title a {
+    color: #666666;
+}
+
+.news-title a:hover {
+    color: #32b16c;
+    text-decoration: none;
+}
+
+/*求购信息*/
+.marginTop-20 {
+    margin-top: 20px;
+}
+
+.qiugou-panel-title {
+    border-bottom: 1px solid #ededed;
+    padding: 10px 0px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.qiugou-box {
+    padding: 0px 10px 10px 10px;
+}
+
+.qiugou-item {
+    border-bottom: 1px dashed #ededed;
+    padding-top: 10px;
+}
+
+.qiugou-img {
+    float: left;
+    margin-right: 10px;
+}
+
+.qiugou-content {
+    font-size: 9px;
+    width: 180px;
+    float: left;
+    overflow: hidden;
+    color: #666666;
+}
+
+.qiugou-person {
+    color: #32b16c;
+}
+
+/* footer*/
+footer {
+    border-top: solid 1px #e9e9e9;
+    padding: 30px 0px;
+    margin-top: 30px;
+}
+
+.copyright {
+    width: 100%;
+    padding: 15px 0px;
+    text-align: center;
+    color: #919191;
+}
+
+/* 商品详细页面css */
+.pad-20 {
+    padding: 20px 20px;
+    overflow: hidden;
+}
+
+.goods-img {
+    max-width: 100%;
+
+}
+
+
+
+.goods-title {
+    font-size: 25px;
+    color: #1C826C;
+}
+
+.goods-price {
+    color: #EB5055;
+    font-size: 25px;
+
+}
+
+.is-discount {
+    font-size: 12px;
+    color: #666;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.goods-detail-nav {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.goods-detail-nav li {
+    padding: 10px 10px;
+    vertical-align: middle;
+}
+
+.goods-detail-nav a {
+    color: #666666;
+    line-height: 34px;
+    font-size: 15px;
+}
+
+.goods-detail-span {
+    padding: 7px 12px;
+    background-color: #4BC0A5;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: right;
+    width: 80px;
+    float: left;
+    margin-right: 10px;
+}
+
+.goods-navbar {
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    min-height: 40px !important;
+}
+
+.user-message-textarea {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+
+.btn-message {
+    margin: 10px 20px;
+}
+
+.user-message-item {
+    border-bottom: 1px dashed #ededed;
+    padding-top: 10px;
+}
+
+.user-message-item-img {
+    float: left;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.user-message-item-person {
+    color: #32b16c;
+}
+
+/*登陆页面*/
+.panel-login {
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 20px;
+}
+
+.login-box-title {
+    padding-bottom: 15px;
+}
+
+.login-box-title p {
+    font-size: 25px;
+    border-bottom: 2px solid #32b16c;
+    color: #32b16c;
+    width: 100px;
+    font-weight: 100;
+
+}
+
+.login-left {
+    color: #949eab;
+    border-right: 1px solid #e8edf0;
+    padding-right: 40px;
+}
+
+.login-right {
+    padding-top: 30px;
+    padding-right: 40px;
+}
+
+.btn-login {
+    margin-top: 15px;
+    color: #53b481;
+    border-color: #53b481;
+    padding: 7px 12px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.login-right-title {
+    font-size: 14px;
+    color: #949eab;
+}
+
+.btn-login-right {
+    color: #fff;
+    background-color: #53b481;
+    border-color: #53b481;
+    padding: 7px 10px;
+    font-size: 14px;
+}
+
+.is-login-box {
+    width: 150px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 18px;
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+.is-login-box-hover {
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+.header-is-login {
+    float: right;
+}
+
+.login-img {
+    margin-left: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.is-login-sub-ul {
+    display: none;
+}
+
+.is-login-sub-ul li {
+    text-align: center;
+    font-size: 14px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    color: #666666;
+    background-color: white;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.is-login-sub-ul li:hover {
+    background-color: #00CC00;
+}
+
+.is-login-sub-ul li a:hover {
+    color: white;
+}
+
+/*商品发布的CSS*/
+.release-form {
+
+}
+
+.img-preview {
+    border: 1px solid #ededed;
+    width: 100%;
+    padding: 10px;
+
+}
+
+#picker {
+
+}
+
+/*新闻详细页面*/
+.pad-25 {
+    padding: 8px 30px 30px 30px;
+}
+
+.news-notice-title {
+    color: #858e8f;
+    margin: 12px 0px;
+    font-size: 12px;
+}
+
+
+.news-notice-title:after {
+    content: '';
+    display: inline-block;
+    width: 34px;
+    height: 0;
+    border-top: 1px solid #ccc;
+    margin: 0 15px 3px 0;
+}
+
+/*个人中心的CSS*/
+.user-box {
+    padding: 5px 0 15px 0;
+}
+
+.user-detail {
+    width: 500px;
+    float: left;
+    border-right: 1px solid #ededed;
+}
+
+.user-detail-img {
+    float: left;
+    margin-right: 15px;
+}
+
+.user-detail-name {
+    font-size: 18px;
+    color: #32b16c;
+}
+
+.user-detail-content {
+    float: left;
+}
+
+.user-release-num {
+    width: 300px;
+    float: left;
+    border-right: 1px solid #ededed;
+}
+
+.user-release-num-ul li {
+    float: left;
+    width: 140px;
+    text-align: center;
+}
+
+.user-detail-btn {
+    float: left;
+
+}
+
+.user-detail-btn-group button {
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+/*活动页面的CSS*/
+.activity-box-title {
+    border-bottom: 1px solid #ededed;
+}
+
+.activity-item {
+    border: 1px solid #ededed;
+    color: #666;
+    margin: 10px 0;
+}
+
+.activey-item-content {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #ededed;
+}
+
+.activity-item-title {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.activity-item-img {
+    float: left;
+    margin: 0 10px;
+    width: 100px;
+    height: 150px;
+}
+
+.span-activity-place {
+    width: 190px;
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+/*活动详细页面*/
+.activity-detial-tag-span {
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.btn-message {
+    margin: 10px 20px;
+    font-size: 12px;
+}
+
+.club-box-img {
+    width: 100px;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.activity-tag {
+    background: #ccc;
+    line-height: 20px;
+    height: 20px;
+    padding: 0px 6px;
+}
+
+.activity-item-prefix-num {
+    font-size: 12px;
+}
+
+#verify_code {
+    cursor: pointer;
+}

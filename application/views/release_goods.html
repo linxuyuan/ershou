@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>发布商品页面</title>
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>"/>
+    <link rel="stylesheet" href="<?= base_url('assets/css/another.css') ?>"/>
+    <link rel="stylesheet" href="<?= base_url('assets/css/fileUploader.css') ?>">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo pull-left"><a href="<?= site_url('Main') ?>"> 广二师在线</a></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div id="#navbar-content" class="nav_bar pull-left collapse navbar-collapse ">
+            <ul class="nav nav-pills header-nav" role="navigation">
+                <li class=""><a href="#">首页</a></li>
+                <li class=""><a href="">社团</a></li>
+                <li class=""><a href=""> 问答</a></li>
+                <li class=""><a href="#"> 商城</a></li>
+            </ul>
+        </div>
+        <div class="header-login pull-right login-box">
+            <a id="btn_login" class="btn navbar-btn" href="<?= site_url('Login')?>">登陆</a>
+            <a id="btn_regeister" class="btn navbar-btn" href="<?= site_url('Register')?>">注册</a>
+        </div>
+    </div>
+</header>
+<div class="container pad-top35">
+    <div class="panel panel-default pad-20">
+        <div class="row">
+            <div class="release-form col-lg-11">
+                <h3>发布闲置</h3>
+                <form id="uploadForm" class="form-horizontal" enctype="multipart/form-data" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">商品图片</label>
+                        <div class="col-sm-10">
+                            <div class="img-preview clearfix">
+                                <div id="result">
+                                    <div id="preview" class="preview"></div>
+                                    <div id="selectors" class="selectors"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="goods_name" class="col-sm-2 control-label">商品名</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="goods_name"
+                                   placeholder="请输入名字">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="goods_price" class="col-sm-2 control-label">价格</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="goods_price"
+                                   placeholder="请输入姓">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="goods_description" class="col-sm-2 control-label">商品描述</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" id="goods_description" rows="3"
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-tel" class="col-sm-2 control-label">联系手机</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="contact-tel"
+                                   placeholder="请输入姓">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="goods-category" class="col-sm-2 control-label">商品分类</label>
+                        <div class="col-sm-10">
+                            <select id="goods-category" class="form-control">
+                                <option>图书</option>
+                                <option>电脑</option>
+                                <option>手机</option>
+                                <option>衣服</option>
+                                <option>电器</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-qq" class="col-sm-2 control-label">联系QQ</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="contact-qq"
+                                   placeholder="请输入姓">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success col-sm-10 pull-right" id="btn_submit">确认提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="copyright">
+        <p>意见反馈 / 加入我们 / 联系我们</p>
+        <p> Powered by 计算机科学系 Copyright © 2011 - 2016 京ICP备09050100号</p>
+    </div>
+</footer>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
+<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<script src="<?= base_url('assets/js/jquery.fileUploader.js') ?>"></script>
+<script type="text/javascript">
+
+
+
+    $.fileUploader({
+        fileSize: 2 * 1024 * 1024,
+        accept: 'gif|jpeg|png|jpg',
+    });
+    $("#btn_submit").bind("click", function () {
+        var goods_name = $("#goods_name").val();
+        var goods_price = $("#goods_price").val();
+        var description = $("#goods_description").val();
+        var contact_tel = $("#contact-tel").val();
+        var contact_qq = $("#contact-qq").val();
+        var goods_category = $("#goods-category  option:selected").text();
+
+        if ($(".input-selector").length <= 1) {
+            alert("请上传商品图片");
+            return false;
+        }
+        if (goods_name == "") {
+            alert("请输入商品名称");
+            return false;
+        }
+        if (goods_price == "") {
+            alert("请输入商品价格");
+            return false;
+        }
+        if (description == "") {
+            alert("请输入商品描述");
+            return false;
+        }
+        if (contact_tel == "") {
+            alert("请输入您的联系电话");
+            return false;
+        }
+        if (contact_qq == "") {
+            alert("请输入您的qq");
+            return false;
+        }
+
+        var form = new FormData(document.getElementById("uploadForm"));
+        form.append("goods_name", goods_name);
+        form.append("goods_price", goods_price);
+        form.append("description", description);
+        form.append("contact_tel", contact_tel);
+        form.append("contact_qq", contact_qq);
+        form.append("goods_category", goods_category);
+        $.ajax({
+            type: "POST",
+            url: "<?php echo site_url('Upload/do_upload') ?>",
+            dataType: "json",
+            data: form,
+            /**
+             * 必须false才会避开jQuery对 formdata 的默认处理
+             * XMLHttpRequest会对 formdata 进行正确的处理
+             */
+            contentType: false,
+            processData: false,
+            beforeSend: function () {
+            },
+            success: function (json) {
+                if (json.success == "1") {
+                    $("#msg").remove();
+
+                    alert("上传商品信息成功");
+                    return false;
+                } else {
+                    $("#msg").remove();
+                    alert("上传商品信息失败");
+                    return false;
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                /*错误信息处理*/
+                alert("错误信息" + textStatus);
+            }
+        });
+    });
+</script>
+</html>
